@@ -11,4 +11,14 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
+const handle = require('./handlers');
+const routes = require('./routes');
+
+app.get('/', (req, res) => res.json({
+  hello: 'world'
+}));
+
+app.use(handle.notFound);
+app.use(handle.errors);
+
 app.listen(PORT, console.log(`Server is running on port ${PORT}`));
