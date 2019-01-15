@@ -18,6 +18,16 @@ const carSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  transmission: {
+    type: String,
+  },
+  coveredDistance: {
+    type: Number,
+  },
+  created: {
+    type: Date,
+    default: Date.now
+  },
   isRented: {
     type: Boolean
   }
