@@ -17,7 +17,7 @@ const routes = require('./routes');
 app.get('/', (req, res) => res.json({
   hello: 'world'
 }));
-
+app.use('/api/car', routes.car)
 app.use(handle.notFound);
 app.use(handle.errors);
 
