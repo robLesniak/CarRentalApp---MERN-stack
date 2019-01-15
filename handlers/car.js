@@ -9,3 +9,12 @@ exports.showCars = async (req, res, next) => {
     next(err);
   }
 }
+
+exports.createCar = async (req, res, next) => {
+  try {
+    //TODO
+  } catch(err) {
+    err.status = 400;
+    next(err);
+  }
+}
