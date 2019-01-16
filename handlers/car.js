@@ -12,7 +12,26 @@ exports.showCars = async (req, res, next) => {
 
 exports.createCar = async (req, res, next) => {
   try {
-    //TODO
+    console.log(req.body);
+    const { 
+      carName,
+      carModel, 
+      plateNumber, 
+      fuelType,
+      transmission,
+      coveredDistance,
+      isRented
+    } = req.body;
+    const car = await db.Car.create({
+      carName,
+      carModel,
+      plateNumber,
+      fuelType,
+      transmission,
+      coveredDistance,
+      isRented
+    });
+    res.status(200).json(car)
   } catch(err) {
     err.status = 400;
     next(err);
