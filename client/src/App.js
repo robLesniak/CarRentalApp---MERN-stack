@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import NavBar from './Components/NavBar';
 
 class App extends Component {
   constructor(){
@@ -26,6 +27,7 @@ class App extends Component {
     console.log(cars);
     return (
       <div className="App">
+      <NavBar />
       <ul>
           {this.state.cars.map((car, key)=> <li key={key}>{car.carName}</li>)}
       </ul>
