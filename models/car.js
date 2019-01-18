@@ -20,6 +20,7 @@ const carSchema = new mongoose.Schema({
   },
   transmission: {
     type: String,
+    required: true
   },
   coveredDistance: {
     type: Number,

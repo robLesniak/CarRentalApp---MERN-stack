@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import NavBar from './Components/NavBar';
 import Car from './Components/Car';
-// import { Card, CardImg, CardText, CardBody,
-//   CardTitle, CardSubtitle, Button, Row, Col } from 'reactstrap';
+import AddCar from './Components/AddCar';
 import './style.css';
 
 
@@ -11,7 +10,10 @@ class App extends Component {
     return (
       <div className="App">
         <NavBar />
+        <br/>
         <Car />
+        <br/>
+        <AddCar />
       </div>
     );
   }

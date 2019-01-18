@@ -24,7 +24,8 @@ class Car extends Component {
   }
   render(){
     return (
-      <div className="col-sm-4 card-car">
+      <div className="container">
+        <div className="row">
         {this.state.cars.map((car, key)=> 
         <div key={key} className="card">
           <Card body>
@@ -38,6 +39,7 @@ class Car extends Component {
          </div>
         )}
         </div>
+      </div>
     );
   }
 
