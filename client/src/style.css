@@ -1,0 +1,7 @@
+.card {
+  display: flex;
+  width: 18rem; 
+}
+.card-car{
+  display: flex;
+}
